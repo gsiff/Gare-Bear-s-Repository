@@ -9,8 +9,30 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play NFL GM Expeience.</tw-noscript></noscript></tw-story>
-<tw-storydata name="NFL GM Expeience" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="3B7C109F-1FFA-4ABC-9D17-8D97ED0CA196" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-tag name="Setup" color="blue"></tw-tag><tw-tag name="startup" color="orange"></tw-tag><tw-passagedata pid="1" name="Welcome" tags="" position="75,25" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[Welcome to the NFL GM Experience!]
-(align:&quot;=&gt;&lt;=&quot;)[[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">[ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) +
+<tw-storydata name="NFL GM Expeience" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="3B7C109F-1FFA-4ABC-9D17-8D97ED0CA196" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story { 
+
+    background-color: #ff0000;
+
+}
+
+
+
+tw-link { 
+
+    color: white;
+
+}
+
+
+
+
+tw-link:hover {
+
+    text-decoration: underline;
+
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-tag name="Setup" color="blue"></tw-tag><tw-tag name="startup" color="orange"></tw-tag><tw-passagedata pid="1" name="Welcome" tags="" position="75,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Welcome to the NFL GM Experience!
+[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">[ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) +
   (align: &quot;&lt;==&quot;) + (box: &quot;==XxXxX&quot;, )[(b4r: &quot;solid&quot;)+(b4r-colour: red) + (text-colour:white)+(bg:blue)[
 Team: (print: $Team)
 OFF (print: $Offense)
@@ -23,7 +45,7 @@ L: (print: $Losses)
 (set: $SpecialTeams to (60))
 (set: $Losses to (0))
 (set: $Wins to (0))
-(set: $Team to &quot;Undecided&quot;)</tw-passagedata><tw-passagedata pid="4" name="Team Selection" tags="" position="75,150" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[Start by selecting your team:]
+(set: $Team to &quot;Undecided&quot;)</tw-passagedata><tw-passagedata pid="4" name="Team Selection" tags="" position="75,150" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[Start by selecting your team:
 49ers Bears Bengals Bills
 Broncos Browns Buccaneers Cardinals 
 Chargers Chiefs Colts Commanders
@@ -31,7 +53,7 @@ Cowboys Dolphins Eagles Falcons
 Giants Jaguars Jets Lions 
 Packers Panthers Patriots Raiders
 Rams Ravens Saints Seahawks
-Steelers Texans Titans Vikings
+Steelers Texans Titans Vikings]
 
 { 
 (click: &quot;49ers&quot;)[
@@ -260,31 +282,31 @@ Steelers Texans Titans Vikings
 ]
 }</tw-passagedata><tw-passagedata pid="5" name="Draft" tags="" position="75,400" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[Pick one rookie to boost your team:]
 
-Travis Hunter (WR/CB)
+(align: &quot;=&gt;&lt;=&quot;)[Travis Hunter (WR/CB)
 
 Shedeur Sanders (QB)
 
 Cam Ward (QB)
 
-Abdul Carter (DL)
+Abdul Carter (DL)]
 {
 (click: &quot;Travis Hunter&quot;)[
 (set: $Offense to it +5)
 (set: $Defense to it +5 )
 (set: $SpecialTeams to it +2)
-(goto: &quot;Season&quot;)
+(goto: &quot;TH&quot;)
 ]
 (click: &quot;Shedeur Sanders&quot;)[
 (set: $Offense to it +7)
-(goto: &quot;Season&quot;)
+(goto: &quot;SS&quot;)
 ]
 (click: &quot;Cam Ward&quot;)[
 (set: $Offense to it +5)
-(goto: &quot;Season&quot;)
+(goto: &quot;CW&quot;)
 ]
 (click: &quot;Abdul Carter&quot;)[
 (set: $Defense to it +5 )
-(goto: &quot;Season&quot;)
+(goto: &quot;AC&quot;)
 ]
 }</tw-passagedata><tw-passagedata pid="6" name="Here&#39;s Your Team" tags="" position="75,275" size="100,100">(align: &quot;=&gt;&lt;=&quot;) + (box: &quot;X&quot;)[(b4r: &quot;solid&quot;)+(b4r-colour: red) + (text-colour:white)+(bg:blue)[
 Team: (print: $Team)
@@ -293,78 +315,21 @@ Defensive Rating: (print: $Defense)
 Special Teams Rating: (print: $SpecialTeams)
 ]]
 
-Continue to the [[Draft]]</tw-passagedata><tw-passagedata pid="7" name="Season" tags="" position="200,150" size="100,100">Welcome to the season!
+(align: &quot;=&gt;&lt;=&quot;)[First, continue to the [[Draft]] to pick a rookie with your first move as GM]</tw-passagedata><tw-passagedata pid="7" name="Season" tags="" position="200,150" size="100,100">Welcome to the season!
 
 Your team, the (print: $Team) has a (print: $Offense) rating on Offense and a (print: $Defense) rating on Defense.
 Are you ready to start?
-[[Yes|Week 1]] [[No|Week 1]]</tw-passagedata><tw-passagedata pid="8" name="Week 1" tags="" position="200,275" size="100,100">Ready or not here comes the first week of the season, lets see if your team can get it done.
-[[Send the Squad Out There|Week 2]]
+[[Yes|Week 1]] [[No|Week 1]]</tw-passagedata><tw-passagedata pid="8" name="Week 1" tags="" position="200,275" size="100,100">Ready or not here comes the first week of the season, lets see if your team can get it done at home against one of the worst in the league.
+[[Send the Squad Out There|Week 1 Result]]
 
-(if: $Offense &gt; 75)[
-Congrats, way to start your season off right!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 75)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="9" name="Week 2" tags="" position="200,400" size="100,100">(if: $Offense &gt; 90)[
+</tw-passagedata><tw-passagedata pid="9" name="Week 2" tags="" position="200,525" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 2|Week 2 Result]]</tw-passagedata><tw-passagedata pid="10" name="Week 3" tags="" position="325,125" size="100,100">
+Good effort out there last week, the (print: $Team) are back at it again in [[Week 3|Week 3 Result]]</tw-passagedata><tw-passagedata pid="11" name="Week 4" tags="" position="325,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 4|Week 4 Result]]</tw-passagedata><tw-passagedata pid="12" name="Week 5" tags="" position="325,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 5|Week 5 Result]]</tw-passagedata><tw-passagedata pid="13" name="Week 6" tags="" position="450,25" size="100,100">Good effort out there last week, the (print: $Team) big rivalry game coming up! [[Week 6|Week 6 Result]]</tw-passagedata><tw-passagedata pid="14" name="Week 7" tags="" position="450,150" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 7|Week 7 Result]]</tw-passagedata><tw-passagedata pid="15" name="Week 8" tags="" position="450,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 8|Week 8 Result]]</tw-passagedata><tw-passagedata pid="16" name="Week 9" tags="" position="450,400" size="100,100">(if: $Defense &gt; 90)[
 Congrats!
 (set: $Wins to it +1)]
 (if: $Offense &lt; 90)[ 
 Sorry, you took the L
 (set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 2|Week 3]]</tw-passagedata><tw-passagedata pid="10" name="Week 3" tags="" position="325,150" size="100,100">(if: $Defense &gt; 70)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 70)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 3|Week 4]]</tw-passagedata><tw-passagedata pid="11" name="Week 4" tags="" position="325,275" size="100,100">(if: $Offense &gt; 87)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 87)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 4|Week 5]]</tw-passagedata><tw-passagedata pid="12" name="Week 5" tags="" position="325,400" size="100,100">(if: $Defense &gt; 88)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 88)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 5|Week 6]]</tw-passagedata><tw-passagedata pid="13" name="Week 6" tags="" position="450,25" size="100,100">(if: $Offense &gt; 87)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 87)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 6|Week 7]]</tw-passagedata><tw-passagedata pid="14" name="Week 7" tags="" position="450,150" size="100,100">(if: $Defense &gt; 86)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 86)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 7|Week 8]]</tw-passagedata><tw-passagedata pid="15" name="Week 8" tags="" position="450,275" size="100,100">(if: $Offense &gt; 85)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 85)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 8|Week 9]]</tw-passagedata><tw-passagedata pid="16" name="Week 9" tags="" position="450,400" size="100,100">(if: $Defense &gt; 90)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 90)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 9|Week 10]]</tw-passagedata><tw-passagedata pid="17" name="Week 10" tags="" position="575,25" size="100,100">(if: $Offense &gt; 83)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 83)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are on their bye week, enjoy your time off. [[Week 10|Bye]]</tw-passagedata><tw-passagedata pid="18" name="Bye" tags="" position="575,150" size="100,100">(if: $Defense &gt; 83)[
-(set: $Wins to it +1)]
-(if: $Offense &lt; 83)[ 
-(set: $Losses to it +1)]
-
-Everyone is getting rested up and ready for the final stretch of the year!
+Good effort out there last week, the (print: $Team) are back at it again in [[Week 9|Week 9 Result]]</tw-passagedata><tw-passagedata pid="17" name="Week 10" tags="" position="575,25" size="100,100">Good effort out there last week, the (print: $Team) Huge game coming up this week!. [[Week 10|Week 10 Result]]</tw-passagedata><tw-passagedata pid="18" name="Bye" tags="" position="575,150" size="100,100">Everyone is getting rested up and ready for the final stretch of the year!
 Your team recieves boosts for the end of the year!
 
 (set: $Offense to it +   (random: 1,7))
@@ -372,59 +337,10 @@ Your team recieves boosts for the end of the year!
 (set: $SpecialTeams to it + (random: 1,7))
 
 [[Week 12]]
-</tw-passagedata><tw-passagedata pid="19" name="Week 12" tags="" position="575,275" size="100,100">(if: $Offense &gt; 70)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 70)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 12|Week 13]]</tw-passagedata><tw-passagedata pid="20" name="Week 13" tags="" position="575,400" size="100,100">(if: $Defense &gt; 88)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 88)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 13|Week 14]]</tw-passagedata><tw-passagedata pid="21" name="Week 14" tags="" position="700,25" size="100,100">(if: $Defense &gt; 85)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 85)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 14|Week 15]]</tw-passagedata><tw-passagedata pid="22" name="Week 15" tags="" position="700,150" size="100,100">(if: $Defense &gt; 87)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 87)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 15|Week 16]]</tw-passagedata><tw-passagedata pid="23" name="Week 16" tags="" position="700,275" size="100,100">(if: $Offense &gt; 92)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 92)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 16|Week 17]]</tw-passagedata><tw-passagedata pid="24" name="Week 17" tags="" position="700,400" size="100,100">(if: $Offense &gt; 82)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 82)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again [[Week 17|Week 18]]</tw-passagedata><tw-passagedata pid="25" name="Week 18" tags="" position="825,25" size="100,100">(if: $Defense &gt; 82)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 82)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Final Game of the season!
-[[Best of Luck|Playoffs]]</tw-passagedata><tw-passagedata pid="26" name="Playoffs" tags="" position="825,150" size="100,100">(if: $Defense &gt; 73)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Defense &lt; 73)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
+</tw-passagedata><tw-passagedata pid="19" name="Week 12" tags="" position="575,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 12|Week 12 Result]]</tw-passagedata><tw-passagedata pid="20" name="Week 13" tags="" position="575,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 13|Week 13 Result]]</tw-passagedata><tw-passagedata pid="21" name="Week 14" tags="" position="700,25" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 14|Week 14 Result]]</tw-passagedata><tw-passagedata pid="22" name="Week 15" tags="" position="700,150" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 15|Week 15 Result]]</tw-passagedata><tw-passagedata pid="23" name="Week 16" tags="" position="700,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 16|Week 16 Result]]</tw-passagedata><tw-passagedata pid="24" name="Week 17" tags="" position="700,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 17|Week 17 Result]]</tw-passagedata><tw-passagedata pid="25" name="Week 18" tags="" position="825,25" size="100,100">Final Game of the season!
+[[Best of Luck|Week 18 Result]]</tw-passagedata><tw-passagedata pid="26" name="Playoffs" tags="" position="825,150" size="100,100">Playoff Time!
 
-Playoff Time!
-
-(if: $Wins &lt; 9)[Your team didn&#39;t qualify for the playoffs, better luck [[next season|End of Season L]]]
+(if: $Wins &lt; 9)[Your team didn&#39;t qualify for the playoffs, better luck [[next season|Missed the yoffs]]]
 
 (if: $Wins &gt; 9)[Congrats, you made the playoffs! Advance to the [[Wild Card]] now?]</tw-passagedata><tw-passagedata pid="27" name="Wild Card" tags="" position="825,275" size="100,100">Welcome to the wild card, answer the question correctly to give your team an advantage to move on.
 Which poet did the Baltimore Ravens take their name from?
@@ -500,11 +416,7 @@ D) Raymond James Stadium
 (click: &quot;Raymond James Stadium&quot;)[
 (goto: &quot;End of Season L&quot;)
 ]
-}</tw-passagedata><tw-passagedata pid="31" name="Super Bowl" tags="" position="950,400" size="100,100">Reporter: Wow, what a season for you and the (print: $Team)! How do you feel about making it all the way to the big dance?
-[[So excited and grateful to be here|SB]]
-[[Honestly, quite nervous|Fired]]
-[[Wait we&#39;re in the Super Bowl?|Fired]]
-[[Let&#39;s get this thing done!|SB]]</tw-passagedata><tw-passagedata pid="32" name="SB" tags="" position="850,525" size="100,100">Who was the last team to complete a perfect season?
+}</tw-passagedata><tw-passagedata pid="31" name="SB" tags="" position="850,525" size="100,100">Who was the last team to complete a perfect season?
 
 A) Patriots
 
@@ -527,21 +439,133 @@ D) Dolphins
 (click: &quot;Dolphins&quot;)[
 (goto: &quot;SB Champs&quot;)
 ]
-}</tw-passagedata><tw-passagedata pid="33" name="Fired" tags="" position="975,525" size="100,100">Your teams owner didn&#39;t like the fear you showed in front of the media, your franchise, the (print: $Team), doesn&#39;t believe in being nervous, so they fired you before the big dance. Can you believe it?
+}</tw-passagedata><tw-passagedata pid="32" name="Fired" tags="" position="975,525" size="100,100">Your teams owner didn&#39;t like the fear you showed in front of the media, your franchise, the (print: $Team), doesn&#39;t believe in being nervous, so they fired you before the big dance. Can you believe it?
 [[Yes]] 
 [[No]]
 
-</tw-passagedata><tw-passagedata pid="34" name="Yes" tags="" position="912.5,650" size="100,100">(set: $Team to &quot;Fired&quot;)
-Your old team got it done in the big game without you. Even though nobody in the league wants you anymore you can try to see if someone will hire you [[next season|Welcome]] or you can go on vacation [[Cancun|Team Selection]] </tw-passagedata><tw-passagedata pid="35" name="No" tags="" position="1037.5,650" size="100,100">(set: $Team to &quot;Fired&quot;)
-Your old team did not get it done in the big game without you. You are now a hot commodity in the league going into [[next season|Welcome]] you can also go on vacation now if you&#39;d like:[[Cancun|Team Selection]] </tw-passagedata><tw-passagedata pid="36" name="SB Champs" tags="" position="775,650" size="100,100">Congrats! You did it and brought your squad to an astounding victory in the Super Bowl!
+</tw-passagedata><tw-passagedata pid="33" name="Yes" tags="" position="912.5,650" size="100,100">(set: $Team to &quot;Fired&quot;)
+Your old team got it done in the big game without you. Even though nobody in the league wants you anymore you can try to see if someone will hire you [[next season|Welcome]] or you can go on vacation [[Cancun|Team Selection]] </tw-passagedata><tw-passagedata pid="34" name="No" tags="" position="1037.5,650" size="100,100">(set: $Team to &quot;Fired&quot;)
+Your old team did not get it done in the big game without you. You are now a hot commodity in the league going into [[next season|Welcome]] you can also go on vacation now if you&#39;d like:[[Cancun|Team Selection]] </tw-passagedata><tw-passagedata pid="35" name="SB Champs" tags="" position="775,650" size="100,100">Congrats! You did it and brought your squad to an astounding victory in the Super Bowl!
 A reporter approaches you about the triumph, what do you say?
 [[I&#39;m going to Disney World|DW]]
 [[I&#39;ll be headed to Disney World|DW]]
 [[I&#39;m gonna go to Disney World|DW]]
-[[Let&#39;s rip Disney World|DW]]</tw-passagedata><tw-passagedata pid="37" name="DW" tags="" position="775,775" size="100,100">&lt;img.src=&quot;C:\Users\garre\OneDrive\Documents\GitHub\Gare-Bear-s-Repository\NFLGMDW.jpeg&quot;&gt;
-[[Try again next year?|Team Selection]]</tw-passagedata><tw-passagedata pid="38" name="Retire" tags="" position="950,150" size="100,100">Goodnight Old Head.
-[[Unretire?|Team Selection]] </tw-passagedata><tw-passagedata pid="39" name="Cancun" tags="" position="1075,150" size="100,100">&lt;img.src=&quot;C:\Users\garre\OneDrive\Documents\GitHub\Gare-Bear-s-Repository\Cancun.jpg&quot;&gt;
-[[Try again next year?|Team Selection]]</tw-passagedata></tw-storydata>
+[[Let&#39;s rip Disney World|DW]]</tw-passagedata><tw-passagedata pid="36" name="DW" tags="" position="775,775" size="100,100">&lt;img.src=&quot;NFLGMDW.jpeg&quot;&gt;
+[[Try again next year?|Team Selection]]</tw-passagedata><tw-passagedata pid="37" name="Retire" tags="" position="950,150" size="100,100">You had a great career! Or did you?
+[[Unretire?|Week 1]] </tw-passagedata><tw-passagedata pid="38" name="Cancun" tags="" position="1075,150" size="100,100">&lt;img.src=&quot;Cancun.jpg&quot;&gt;
+[[Try again next year?|Week 1]]</tw-passagedata><tw-passagedata pid="39" name="Week 1 Result" tags="" position="200,400" size="100,100">(if: $Offense &gt; 75)[
+Congrats, way to start your season off right! [[Move on|Week 2]] 
+(set: $Wins to it +1)
+]
+(if: $Offense &lt; 75)[ 
+Not a great start, a loss in a close game but the O couldn&#39;t get it done. [[Move on|Week 2]] 
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="40" name="AC" tags="" position="75,650" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[You drafted Abdul Carter. He boosted your defense by 5 points! 
+
+Now what?
+
+Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="41" name="TH" tags="" position="75,775" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[You drafted Travis Hunter. He boosted both your Defense and your Offense by 5 points, as well as your Special Teams by 2! 
+
+Now what?
+
+Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="42" name="CW" tags="" position="50,1050" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[You drafted Cam Ward. He boosted your Offense by 5 points. 
+
+Now what?
+
+Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="43" name="SS" tags="" position="50,925" size="100,100">(enchant:?page,(text-colour:red)+(bg:white))(align:&quot;=&gt;&lt;=&quot;)[You drafted Shedeur Sanders. He boosted your offense by 7 points! 
+
+Now what?
+
+Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="44" name="Week 3 Result" tags="" position="25,525" size="100,100">(if: $Defense &gt; 70)[
+Congrats, the Defense was lockdown. [[Move on|Week 4]]
+(set: $Wins to it +1)]
+(if: $Defense &lt; 70)[ 
+L. [[Move on|Week 4]]
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="45" name="Week 4 Result" tags="" position="200,775" size="100,100">(if: $Offense &gt; 87)[
+What a game! Your QB put the team on his back! [[Move on|Week 5]]
+(set: $Wins to it +1)
+]
+(if: $Offense &lt; 87)[ 
+The Offense just didn&#39;t have what it takes :( [[Move on|Week 5]]
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="46" name="Week 5 Result" tags="" position="175,1025" size="100,100">(if: $Defense &gt; 88)[
+A late goal line stand gets you the win. [[Move on|Week 6]]
+(set: $Wins to it +1)
+]
+(if: $Defense &lt; 88)[ 
+Their running back scored four touchdowns and registered five griddy dances during the game, maybe next week. [[Move on|Week 6]]
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="47" name="Week 6 Result" tags="" position="300,1025" size="100,100">(if: $Offense &gt; 87)[
+Late game field goal for the win, congrats!  [[Move on|Week 7]]
+(set: $Wins to it +1)
+]
+(if: $Offense &lt; 87)[ 
+Sorry, just not enough to get it done. [[Move on|Week 7]]
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="48" name="Week 2 Result" tags="" position="200,650" size="100,100">(if: $Offense &gt; 75)[
+Big day for the Defense! [[Move on|Week 3]] 
+(set: $Wins to it +1)
+]
+(if: $Offense &lt; 75)[ 
+The D couldn&#39;t get it done. [[Move on|Week 3]] 
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="49" name="Week 7 Result" tags="" position="300,900" size="100,100">(if: $Defense &gt; 86)[
+Two pick sixes led you to the dub!  [[Move on|Week 8]]
+(set: $Wins to it +1)
+]
+(if: $Defense &lt; 86)[ 
+Too many missed tackles [[Move on|Week 8]]
+(set: $Losses to it +1)
+]</tw-passagedata><tw-passagedata pid="50" name="Week 8 Result" tags="" position="200,900" size="100,100">(if: $Offense &gt; 85)[
+Big win! [[Move on|Week 9]]
+(set: $Wins to it +1)]
+(if: $Offense &lt; 85)[ 
+We might be tanking this year. [[Move on|Week 9]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="51" name="Week 9 Result" tags="" position="325,775" size="100,100">(if: $Defense &gt; 90)[
+What a game for the Defense! [[Move on|Week 10]]
+(set: $Wins to it +1)]
+(if: $Defense &lt; 90)[ 
+The other Offense was just too powerful in the end. [[Move on|Week 10]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="52" name="Week 10 Result" tags="" position="575,525" size="100,100">Wow that was tough loss, At least you got the bye week coming up so you can say bye to this week.
+
+&quot;[[Bye]]&quot;</tw-passagedata><tw-passagedata pid="53" name="Week 12 Result" tags="" position="700,525" size="100,100">(if: $Offense &gt; 70)[
+Way to get the win! [[Move on|Week 13]]
+(set: $Wins to it +1)]
+(if: $Offense &lt; 70)[ 
+Time to regroup. [[Move on|Week 13]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="54" name="Week 17 Result" tags="" position="575,650" size="100,100">(if: $Offense &gt; 82)[
+Nice game! [[Move on|Week 18]]
+(set: $Wins to it +1)]
+(if: $Offense &lt; 82)[ 
+Sorry, you took the L [[Move on|Week 18]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="55" name="Week 16 Result" tags="" position="575,775" size="100,100">(if: $Offense &gt; 92)[
+Wow! What a win, you&#39;re looking primed for the playoffs. [[Move on|Week 17]]
+(set: $Wins to it +1)]
+(if: $Offense &lt; 92)[ 
+Tough game in the cold on the road. [[Move on|Week 17]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="56" name="Week 14 Result" tags="" position="450,800" size="100,100">(if: $Defense &gt; 85)[
+Great Dub! [[Move on|Week 15]]
+(set: $Wins to it +1)]
+(if: $Defense &lt; 85)[ 
+Next week, surely [[Move on|Week 15]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="57" name="Week 18 Result" tags="" position="550,900" size="100,100">(if: $Defense &gt; 82)[
+Big win to finish out the year onto the [[Playoffs]] 
+(set: $Wins to it +1)]
+(if: $Defense &lt; 82)[ 
+Tough game, lets see if you made the [[Playoffs]] 
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="58" name="Week 15 Result" tags="" position="700,900" size="100,100">(if: $Offense &gt; 82)[
+Good win out there! [[Move on|Week 16]]
+(set: $Wins to it +1)]
+(if: $Offense &lt; 82)[ 
+Tough season. [[Move on|Week 16]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="59" name="Week 13 Result" tags="" position="450,525" size="100,100">(if: $Defense &gt; 88)[
+Your D is stellar ;) [[Move on|Week 14]]
+(set: $Wins to it +1)]
+(if: $Defense &lt; 88)[ 
+Not enough D to get the W [[Move on|Week 14]]
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="60" name="Missed the yoffs" tags="" position="950,400" size="100,100">Wow you missed the playoffs? *Cough* *Cough* Embarrassing.
+You are forced into [[Retire]]ment</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
