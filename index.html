@@ -32,7 +32,7 @@ tw-link:hover {
 
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-tag name="Setup" color="blue"></tw-tag><tw-tag name="startup" color="orange"></tw-tag><tw-passagedata pid="1" name="Welcome" tags="" position="75,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Welcome to the NFL GM Experience!
-[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">[ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) +
+[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">[ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) + (if:(passage:)&#39;s name is not &quot;Cancun&quot;) +(if:(passage:)&#39;s name is not &quot;DW&quot;) 
   (align: &quot;&lt;==&quot;) + (box: &quot;==XxXxX&quot;, )[(b4r: &quot;solid&quot;)+(b4r-colour: red) + (text-colour:white)+(bg:blue)[
 Team: (print: $Team)
 OFF (print: $Offense)
@@ -446,9 +446,9 @@ A reporter approaches you about the triumph, what do you say?
 [[I&#39;m going to Disney World|DW]]
 [[I&#39;ll be headed to Disney World|DW]]
 [[I&#39;m gonna go to Disney World|DW]]
-[[Let&#39;s rip Disney World|DW]]</tw-passagedata><tw-passagedata pid="36" name="DW" tags="" position="825,850" size="100,100">&lt;img.src=&quot;NFLGMDW.jpeg&quot;&gt;
+[[Let&#39;s rip Disney World|DW]]</tw-passagedata><tw-passagedata pid="36" name="DW" tags="" position="825,850" size="100,100">&lt;img.src=&quot;NFLGMDW&quot;&gt;
 </tw-passagedata><tw-passagedata pid="37" name="Retire" tags="" position="950,150" size="100,100">You had a great career! Or did you?
-[[Unretire?|Week 1]] </tw-passagedata><tw-passagedata pid="38" name="Cancun" tags="" position="1075,150" size="100,100">&lt;img.src=&quot;Cancun.jpg&quot;&gt;
+[[Unretire?|Week 1]] </tw-passagedata><tw-passagedata pid="38" name="Cancun" tags="" position="1075,150" size="100,100">&lt;img.src=&quot;Cancun&quot;&gt;
 </tw-passagedata><tw-passagedata pid="39" name="Week 1 Result" tags="" position="200,400" size="100,100">(if: $Offense &gt;= 75)[
 Congrats, way to start your season off right! [[Move on|Week 2]] 
 (set: $Wins to it +1)
