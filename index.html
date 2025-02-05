@@ -32,15 +32,15 @@ tw-link:hover {
 
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-tag name="Setup" color="blue"></tw-tag><tw-tag name="startup" color="orange"></tw-tag><tw-passagedata pid="1" name="Welcome" tags="" position="75,25" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Welcome to the NFL GM Experience!
-[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">[ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) + (if:(passage:)&#39;s name is not &quot;Cancun&quot;) +(if:(passage:)&#39;s name is not &quot;DW&quot;) +
-  (align: &quot;&lt;==&quot;) + (box: &quot;==XxXxX&quot;, )[(b4r: &quot;solid&quot;)+(b4r-colour: red) + (text-colour:white)+(bg:blue)[
+[[Click Here to Choose Your Team|Team Selection]]]</tw-passagedata><tw-passagedata pid="2" name="Header" tags="header" position="325,25" size="100,100">{ (if: (passage:)&#39;s name is not &quot;Welcome&quot; ) + (if:(passage:)&#39;s name is not &quot;Here&#39;s Your Team&quot;) +  (if:(passage:)&#39;s name is not &quot;Season&quot;) + (if:(passage:)&#39;s name is not &quot;Cancun&quot;) +(if:(passage:)&#39;s name is not &quot;DW&quot;) +  (align: &quot;&lt;==&quot;) + (box: &quot;==XxXxX&quot;, )[(b4r: &quot;solid&quot;)+(b4r-colour: red) + (text-colour:white)+(bg:blue)[
 Team: (print: $Team)
 OFF (print: $Offense)
 DEF: (print: $Defense)
 SPT: (print: $SpecialTeams)
 W: (print: $Wins)
 L: (print: $Losses)
-]]]</tw-passagedata><tw-passagedata pid="3" name="Engine" tags="startup" position="200,25" size="100,100">(set: $Offense to (60))
+]]
+}</tw-passagedata><tw-passagedata pid="3" name="Engine" tags="startup" position="200,25" size="100,100">(set: $Offense to (60))
 (set: $Defense to (60))
 (set: $SpecialTeams to (60))
 (set: $Losses to (0))
