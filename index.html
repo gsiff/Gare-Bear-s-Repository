@@ -317,19 +317,15 @@ Special Teams Rating: (print: $SpecialTeams)
 
 (align: &quot;=&gt;&lt;=&quot;)[First, continue to the [[Draft]] to pick a rookie with your first move as GM]</tw-passagedata><tw-passagedata pid="7" name="Season" tags="" position="200,150" size="100,100">Welcome to the season!
 
-Your team, the (print: $Team) has a (print: $Offense) rating on Offense and a (print: $Defense) rating on Defense.
+Your team, the (print: $Team) have a (print: $Offense) rating on Offense and a (print: $Defense) rating on Defense.
 Are you ready to start?
 [[Yes|Week 1]] [[No|Week 1]]</tw-passagedata><tw-passagedata pid="8" name="Week 1" tags="" position="200,275" size="100,100">Ready or not here comes the first week of the season, lets see if your team can get it done at home against one of the worst in the league.
 [[Send the Squad Out There|Week 1 Result]]
 
 </tw-passagedata><tw-passagedata pid="9" name="Week 2" tags="" position="200,525" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 2|Week 2 Result]]</tw-passagedata><tw-passagedata pid="10" name="Week 3" tags="" position="325,125" size="100,100">
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 3|Week 3 Result]]</tw-passagedata><tw-passagedata pid="11" name="Week 4" tags="" position="325,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 4|Week 4 Result]]</tw-passagedata><tw-passagedata pid="12" name="Week 5" tags="" position="325,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 5|Week 5 Result]]</tw-passagedata><tw-passagedata pid="13" name="Week 6" tags="" position="450,25" size="100,100">Good effort out there last week, the (print: $Team) big rivalry game coming up! [[Week 6|Week 6 Result]]</tw-passagedata><tw-passagedata pid="14" name="Week 7" tags="" position="450,150" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 7|Week 7 Result]]</tw-passagedata><tw-passagedata pid="15" name="Week 8" tags="" position="450,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again in [[Week 8|Week 8 Result]]</tw-passagedata><tw-passagedata pid="16" name="Week 9" tags="" position="450,400" size="100,100">(if: $Defense &gt; 90)[
-Congrats!
-(set: $Wins to it +1)]
-(if: $Offense &lt; 90)[ 
-Sorry, you took the L
-(set: $Losses to it +1)]
-Good effort out there last week, the (print: $Team) are back at it again in [[Week 9|Week 9 Result]]</tw-passagedata><tw-passagedata pid="17" name="Week 10" tags="" position="575,25" size="100,100">Good effort out there last week, the (print: $Team) Huge game coming up this week!. [[Week 10|Week 10 Result]]</tw-passagedata><tw-passagedata pid="18" name="Bye" tags="" position="575,150" size="100,100">Everyone is getting rested up and ready for the final stretch of the year!
+It&#39;s been a good week of practice, and the (print: $Team) are back at it again in [[Week 3|Week 3 Result]]</tw-passagedata><tw-passagedata pid="11" name="Week 4" tags="" position="325,275" size="100,100">Good effort out there last week, the (print: $Team) play again this Thursday! [[Week 4|Week 4 Result]]</tw-passagedata><tw-passagedata pid="12" name="Week 5" tags="" position="325,400" size="100,100">Long week fo rest, the (print: $Team) are back tonight! [[Week 5|Week 5 Result]]</tw-passagedata><tw-passagedata pid="13" name="Week 6" tags="" position="450,25" size="100,100">Good effort out there last week, the (print: $Team) have big rivalry game coming up! [[Week 6|Week 6 Result]]</tw-passagedata><tw-passagedata pid="14" name="Week 7" tags="" position="450,150" size="100,100">The (print: $Team) are back at it again in [[Week 7|Week 7 Result]]</tw-passagedata><tw-passagedata pid="15" name="Week 8" tags="" position="450,275" size="100,100">Another tough game incoming [[Week 8|Week 8 Result]]</tw-passagedata><tw-passagedata pid="16" name="Week 9" tags="" position="450,400" size="100,100">Just when you thought last week was gonna be hard:
+[[uh oh we have no chance|Fired]]
+[[Week 9|Week 9 Result]]</tw-passagedata><tw-passagedata pid="17" name="Week 10" tags="" position="575,25" size="100,100">And somehow the opponents just keep getting better. [[Week 10|Week 10 Result]]</tw-passagedata><tw-passagedata pid="18" name="Bye" tags="" position="575,150" size="100,100">Everyone is getting rested up and ready for the final stretch of the year!
 Your team recieves boosts for the end of the year!
 
 (set: $Offense to it +   (random: 1,7))
@@ -337,7 +333,7 @@ Your team recieves boosts for the end of the year!
 (set: $SpecialTeams to it + (random: 1,7))
 
 [[Week 12]]
-</tw-passagedata><tw-passagedata pid="19" name="Week 12" tags="" position="575,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 12|Week 12 Result]]</tw-passagedata><tw-passagedata pid="20" name="Week 13" tags="" position="575,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 13|Week 13 Result]]</tw-passagedata><tw-passagedata pid="21" name="Week 14" tags="" position="700,25" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 14|Week 14 Result]]</tw-passagedata><tw-passagedata pid="22" name="Week 15" tags="" position="700,150" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 15|Week 15 Result]]</tw-passagedata><tw-passagedata pid="23" name="Week 16" tags="" position="700,275" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 16|Week 16 Result]]</tw-passagedata><tw-passagedata pid="24" name="Week 17" tags="" position="700,400" size="100,100">Good effort out there last week, the (print: $Team) are back at it again [[Week 17|Week 17 Result]]</tw-passagedata><tw-passagedata pid="25" name="Week 18" tags="" position="825,25" size="100,100">Final Game of the season!
+</tw-passagedata><tw-passagedata pid="19" name="Week 12" tags="" position="575,275" size="100,100">The team is rested up and the (print: $Team) are ready to go in [[Week 12|Week 12 Result]]</tw-passagedata><tw-passagedata pid="20" name="Week 13" tags="" position="575,400" size="100,100">Here we go, the city is electric, let&#39;s get two in a row: [[Week 13|Week 13 Result]]</tw-passagedata><tw-passagedata pid="21" name="Week 14" tags="" position="700,25" size="100,100">Here we go: [[Week 14|Week 14 Result]]</tw-passagedata><tw-passagedata pid="22" name="Week 15" tags="" position="700,150" size="100,100">It&#39;s a quite a long season isn&#39;t it [[Week 15|Week 15 Result]]</tw-passagedata><tw-passagedata pid="23" name="Week 16" tags="" position="700,275" size="100,100">It is December now: [[Week 16|Week 16 Result]]</tw-passagedata><tw-passagedata pid="24" name="Week 17" tags="" position="700,400" size="100,100">Need it this week, only 2 games left before the playoffs! [[Week 17|Week 17 Result]]</tw-passagedata><tw-passagedata pid="25" name="Week 18" tags="" position="825,25" size="100,100">Final Game of the season!
 [[Best of Luck|Week 18 Result]]</tw-passagedata><tw-passagedata pid="26" name="Playoffs" tags="" position="825,150" size="100,100">Playoff Time!
 
 (if: $Wins &lt; 9)[Your team didn&#39;t qualify for the playoffs, better luck [[next season|Missed the yoffs]]]
@@ -453,7 +449,7 @@ A reporter approaches you about the triumph, what do you say?
 [[Let&#39;s rip Disney World|DW]]</tw-passagedata><tw-passagedata pid="36" name="DW" tags="" position="775,775" size="100,100">&lt;img.src=&quot;NFLGMDW.jpeg&quot;&gt;
 [[Try again next year?|Team Selection]]</tw-passagedata><tw-passagedata pid="37" name="Retire" tags="" position="950,150" size="100,100">You had a great career! Or did you?
 [[Unretire?|Week 1]] </tw-passagedata><tw-passagedata pid="38" name="Cancun" tags="" position="1075,150" size="100,100">&lt;img.src=&quot;Cancun.jpg&quot;&gt;
-[[Try again next year?|Week 1]]</tw-passagedata><tw-passagedata pid="39" name="Week 1 Result" tags="" position="200,400" size="100,100">(if: $Offense &gt; 75)[
+[[Try again next year?|Week 1]]</tw-passagedata><tw-passagedata pid="39" name="Week 1 Result" tags="" position="200,400" size="100,100">(if: $Offense &gt;= 75)[
 Congrats, way to start your season off right! [[Move on|Week 2]] 
 (set: $Wins to it +1)
 ]
@@ -476,90 +472,91 @@ Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="43" name="SS" 
 
 Now what?
 
-Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="44" name="Week 3 Result" tags="" position="25,525" size="100,100">(if: $Defense &gt; 70)[
+Continue to the [[Season]]?]</tw-passagedata><tw-passagedata pid="44" name="Week 3 Result" tags="" position="25,525" size="100,100">(if: $Defense &gt;= 70)[
 Congrats, the Defense was lockdown. [[Move on|Week 4]]
 (set: $Wins to it +1)]
 (if: $Defense &lt; 70)[ 
 L. [[Move on|Week 4]]
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="45" name="Week 4 Result" tags="" position="200,775" size="100,100">(if: $Offense &gt; 87)[
+]</tw-passagedata><tw-passagedata pid="45" name="Week 4 Result" tags="" position="200,775" size="100,100">(if: $Offense &gt;= 87)[
 What a game! Your QB put the team on his back! [[Move on|Week 5]]
 (set: $Wins to it +1)
 ]
 (if: $Offense &lt; 87)[ 
 The Offense just didn&#39;t have what it takes :( [[Move on|Week 5]]
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="46" name="Week 5 Result" tags="" position="175,1025" size="100,100">(if: $Defense &gt; 88)[
+]</tw-passagedata><tw-passagedata pid="46" name="Week 5 Result" tags="" position="175,1025" size="100,100">(if: $Defense &gt;= 88)[
 A late goal line stand gets you the win. [[Move on|Week 6]]
 (set: $Wins to it +1)
 ]
 (if: $Defense &lt; 88)[ 
 Their running back scored four touchdowns and registered five griddy dances during the game, maybe next week. [[Move on|Week 6]]
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="47" name="Week 6 Result" tags="" position="300,1025" size="100,100">(if: $Offense &gt; 87)[
+]</tw-passagedata><tw-passagedata pid="47" name="Week 6 Result" tags="" position="300,1025" size="100,100">(if: $Offense &gt;= 87)[
 Late game field goal for the win, congrats!  [[Move on|Week 7]]
 (set: $Wins to it +1)
 ]
 (if: $Offense &lt; 87)[ 
 Sorry, just not enough to get it done. [[Move on|Week 7]]
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="48" name="Week 2 Result" tags="" position="200,650" size="100,100">(if: $Offense &gt; 75)[
+]</tw-passagedata><tw-passagedata pid="48" name="Week 2 Result" tags="" position="200,650" size="100,100">(if: $Offense &gt;= 75)[
 Big day for the Defense! [[Move on|Week 3]] 
 (set: $Wins to it +1)
 ]
 (if: $Offense &lt; 75)[ 
 The D couldn&#39;t get it done. [[Move on|Week 3]] 
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="49" name="Week 7 Result" tags="" position="300,900" size="100,100">(if: $Defense &gt; 86)[
+]</tw-passagedata><tw-passagedata pid="49" name="Week 7 Result" tags="" position="300,900" size="100,100">(if: $Defense &gt;= 86)[
 Two pick sixes led you to the dub!  [[Move on|Week 8]]
 (set: $Wins to it +1)
 ]
 (if: $Defense &lt; 86)[ 
 Too many missed tackles [[Move on|Week 8]]
 (set: $Losses to it +1)
-]</tw-passagedata><tw-passagedata pid="50" name="Week 8 Result" tags="" position="200,900" size="100,100">(if: $Offense &gt; 85)[
+]</tw-passagedata><tw-passagedata pid="50" name="Week 8 Result" tags="" position="200,900" size="100,100">(if: $Offense &gt;= 85)[
 Big win! [[Move on|Week 9]]
 (set: $Wins to it +1)]
 (if: $Offense &lt; 85)[ 
 We might be tanking this year. [[Move on|Week 9]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="51" name="Week 9 Result" tags="" position="325,775" size="100,100">(if: $Defense &gt; 90)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="51" name="Week 9 Result" tags="" position="325,775" size="100,100">(if: $Defense &gt;= 90)[
 What a game for the Defense! [[Move on|Week 10]]
 (set: $Wins to it +1)]
 (if: $Defense &lt; 90)[ 
 The other Offense was just too powerful in the end. [[Move on|Week 10]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="52" name="Week 10 Result" tags="" position="575,525" size="100,100">Wow that was tough loss, At least you got the bye week coming up so you can say bye to this week.
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="52" name="Week 10 Result" tags="" position="575,525" size="100,100">(set: $Losses to it +1)
+Wow that was tough loss, At least you got the bye week coming up so you can say bye to this week.
 
-&quot;[[Bye]]&quot;</tw-passagedata><tw-passagedata pid="53" name="Week 12 Result" tags="" position="700,525" size="100,100">(if: $Offense &gt; 70)[
+&quot;[[Bye]]&quot;</tw-passagedata><tw-passagedata pid="53" name="Week 12 Result" tags="" position="700,525" size="100,100">(if: $Offense &gt;= 70)[
 Way to get the win! [[Move on|Week 13]]
 (set: $Wins to it +1)]
 (if: $Offense &lt; 70)[ 
 Time to regroup. [[Move on|Week 13]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="54" name="Week 17 Result" tags="" position="575,650" size="100,100">(if: $Offense &gt; 82)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="54" name="Week 17 Result" tags="" position="575,650" size="100,100">(if: $Offense &gt;= 82)[
 Nice game! [[Move on|Week 18]]
 (set: $Wins to it +1)]
 (if: $Offense &lt; 82)[ 
 Sorry, you took the L [[Move on|Week 18]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="55" name="Week 16 Result" tags="" position="575,775" size="100,100">(if: $Offense &gt; 92)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="55" name="Week 16 Result" tags="" position="575,775" size="100,100">(if: $Offense &gt;= 92)[
 Wow! What a win, you&#39;re looking primed for the playoffs. [[Move on|Week 17]]
 (set: $Wins to it +1)]
 (if: $Offense &lt; 92)[ 
 Tough game in the cold on the road. [[Move on|Week 17]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="56" name="Week 14 Result" tags="" position="450,800" size="100,100">(if: $Defense &gt; 85)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="56" name="Week 14 Result" tags="" position="450,800" size="100,100">(if: $Defense &gt;= 85)[
 Great Dub! [[Move on|Week 15]]
 (set: $Wins to it +1)]
 (if: $Defense &lt; 85)[ 
 Next week, surely [[Move on|Week 15]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="57" name="Week 18 Result" tags="" position="550,900" size="100,100">(if: $Defense &gt; 82)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="57" name="Week 18 Result" tags="" position="550,900" size="100,100">(if: $Defense &gt;= 82)[
 Big win to finish out the year onto the [[Playoffs]] 
 (set: $Wins to it +1)]
 (if: $Defense &lt; 82)[ 
 Tough game, lets see if you made the [[Playoffs]] 
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="58" name="Week 15 Result" tags="" position="700,900" size="100,100">(if: $Offense &gt; 82)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="58" name="Week 15 Result" tags="" position="700,900" size="100,100">(if: $Offense &gt;= 82)[
 Good win out there! [[Move on|Week 16]]
 (set: $Wins to it +1)]
 (if: $Offense &lt; 82)[ 
 Tough season. [[Move on|Week 16]]
-(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="59" name="Week 13 Result" tags="" position="450,525" size="100,100">(if: $Defense &gt; 88)[
+(set: $Losses to it +1)]</tw-passagedata><tw-passagedata pid="59" name="Week 13 Result" tags="" position="450,525" size="100,100">(if: $Defense &gt;= 88)[
 Your D is stellar ;) [[Move on|Week 14]]
 (set: $Wins to it +1)]
 (if: $Defense &lt; 88)[ 
